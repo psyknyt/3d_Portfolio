@@ -35,10 +35,12 @@ const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    //tracks media sizes if it reaches screen captures it
     const mediaQuery = window.matchMedia("(max-width: 500px)");
 
     setIsMobile(mediaQuery.matches);
-
+    
+    // handles change to media query
     const handleMediaQueryChange = (e) => {
       setIsMobile(e.matches);
     };
